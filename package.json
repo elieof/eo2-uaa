@@ -1,7 +1,7 @@
 {
   "name": "eo-2-uaa",
   "version": "0.0.0",
-  "description": "Description for eo2-uaa",
+  "description": "Description for eo2Uaa",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

@@ -6,7 +6,7 @@
     },
     "jhipsterVersion": "6.7.1",
     "applicationType": "uaa",
-    "baseName": "eo2-uaa",
+    "baseName": "eo2Uaa",
     "packageName": "com.fahkap.eo2.uaa",
     "packageFolder": "com/fahkap/eo2/uaa",
     "serverPort": "9999",

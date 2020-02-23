@@ -1,10 +1,8 @@
 package com.fahkap.eo2.uaa;
 
 import com.fahkap.eo2.uaa.config.ApplicationProperties;
-
 import io.github.jhipster.config.DefaultProfileUtil;
 import io.github.jhipster.config.JHipsterConstants;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +33,7 @@ public class Eo2UaaApp {
     }
 
     /**
-     * Initializes eo2-uaa.
+     * Initializes eo2Uaa.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>

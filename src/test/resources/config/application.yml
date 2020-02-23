@@ -17,15 +17,15 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: eo2-uaa
-    instanceId: eo2-uaa:${spring.application.instance-id:${random.value}}
+    appname: eo2Uaa
+    instanceId: eo2Uaa:${spring.application.instance-id:${random.value}}
 
 spring:
   application:
-    name: eo2-uaa
+    name: eo2Uaa
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:eo2-uaa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:eo2Uaa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -87,6 +87,12 @@ spring:
 server:
   port: 10344
   address: localhost
+
+uaa:
+  key-store:
+    name: config/tls/keystore-test.p12
+    password: password
+    alias: selfsigned
 
 # ===================================================================
 # JHipster specific properties

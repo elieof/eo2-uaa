@@ -1,9 +1,9 @@
 version: '2'
 services:
-  eo2-uaa-elasticsearch:
+  eo2uaa-elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.6
-    # volumes:
-    #     - ~/volumes/jhipster/eo2-uaa/elasticsearch/:/usr/share/elasticsearch/data/
+    #    volumes:
+    #      - ~/volumes/jhipster/eo2Uaa/elasticsearch/:/usr/share/elasticsearch/data/
     ports:
       - 9200:9200
       - 9300:9300

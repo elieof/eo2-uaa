@@ -15,9 +15,9 @@
 
 logging:
   level:
-    ROOT: DEBUG
-    io.github.jhipster: DEBUG
-    com.fahkap.eo2.uaa: DEBUG
+    ROOT: INFO
+    io.github.jhipster: INFO
+    com.fahkap.eo2.uaa: INFO
 
 eureka:
   instance:
@@ -60,8 +60,8 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:eo2-uaa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: eo2-uaa
+    url: jdbc:h2:mem:eo2uaa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: eo2Uaa
     password:
     hikari:
       poolName: Hikari
@@ -79,7 +79,7 @@ spring:
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
       hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
-      hibernate.cache.hazelcast.instance_name: eo2-uaa
+      hibernate.cache.hazelcast.instance_name: eo2Uaa
       hibernate.cache.use_minimal_puts: true
       hibernate.cache.hazelcast.use_lite_member: true
   data:
@@ -87,6 +87,9 @@ spring:
       properties:
         path:
           home: target/elasticsearch
+        # See https://github.com/jhipster/generator-jhipster/issues/10302
+        node:
+          max_local_storage_nodes: 2
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
@@ -157,15 +160,15 @@ jhipster:
 uaa:
   key-store:
     name: config/tls/keystore.p12
-    password: password
-    alias: selfsigned
+    password: eo2password
+    alias: eo2uaa
   web-client-configuration:
     # Access Token is valid for 5 mins
     access-token-validity-in-seconds: 300
     # Refresh Token is valid for 7 days
     refresh-token-validity-in-seconds-for-remember-me: 604800
-    client-id: web_app
-    secret: changeit
+    client-id: eo2_uua_web_app
+    secret: eo2_uua_web_password
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
