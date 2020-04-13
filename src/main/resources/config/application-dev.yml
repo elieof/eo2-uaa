@@ -87,6 +87,7 @@ spring:
       properties:
         path:
           home: target/elasticsearch
+#          home: ../docker-compose/log-data
         # See https://github.com/jhipster/generator-jhipster/issues/10302
         node:
           max_local_storage_nodes: 2
@@ -107,7 +108,7 @@ spring:
       probability: 1 # report 100% of traces
   zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
     base-url: http://localhost:9411
-    enabled: false
+    enabled: true
     locator:
       discovery:
         enabled: true
@@ -146,12 +147,12 @@ jhipster:
     base-url: http://127.0.0.1:9000
   metrics:
     logs: # Reports metrics in the logs
-      enabled: false
+      enabled: true
       report-frequency: 60 # in seconds
   logging:
     use-json-format: false # By default, logs are not in Json format
     logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
-      enabled: false
+      enabled: true
       host: localhost
       port: 5000
       queue-size: 512

@@ -5,7 +5,7 @@
 
     <groupId>com.fahkap.eo2.uaa</groupId>
     <artifactId>eo-2-uaa</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.0</version>
     <packaging>jar</packaging>
     <name>Eo 2 Uaa</name>
 

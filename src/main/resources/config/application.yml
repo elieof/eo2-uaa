@@ -196,4 +196,5 @@ kafka:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
+appVersion: #project.version#
 # application:
