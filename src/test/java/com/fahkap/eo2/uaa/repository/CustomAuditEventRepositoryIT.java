@@ -1,6 +1,7 @@
 package com.fahkap.eo2.uaa.repository;
 
 import com.fahkap.eo2.uaa.Eo2UaaApp;
+
 import com.fahkap.eo2.uaa.config.Constants;
 import com.fahkap.eo2.uaa.config.audit.AuditEventConverter;
 import com.fahkap.eo2.uaa.domain.PersistentAuditEvent;
