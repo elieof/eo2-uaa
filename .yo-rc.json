@@ -1,0 +1,65 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.fahkap.eo2.uaa",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.7.1",
+    "applicationType": "uaa",
+    "baseName": "eo2Uaa",
+    "packageName": "com.fahkap.eo2.uaa",
+    "packageFolder": "com/fahkap/eo2/uaa",
+    "serverPort": "9999",
+    "authenticationType": "uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MzIwOTE2ZmU2M2I3NWFhYTBjMDJkYTQ0NGM4MGE0ZmRjZTI5MjIyYjI1ZDk0ZGQ2NzZmNDNkZTE0ZjJlMzZhODJlMzk4NGMwOGU1MjRiMzNlMmVmYjcyZTkxYmI4MzgzMWQ4OGQ5NjA1NGQ3MmZkM2E5YmZjMTA5MDI0YTU3NTQ=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1581765606853,
+    "testFrameworks": ["gatling", "cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-docker",
+        "version": "2.5.0"
+      },
+      {
+        "name": "generator-jhipster-swagger-cli",
+        "version": "3.0.1"
+      },
+      {
+        "name": "generator-jhipster-spring-cloud-stream",
+        "version": "1.0.0"
+      },
+      {
+        "name": "generator-jhipster-audit-helper",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-jhipster-uaa-security-authority",
+        "version": "1.0.1"
+      },
+      {
+        "name": "generator-jhipster-jgitver",
+        "version": "0.1.0"
+      }
+    ],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": ["en", "fr"],
+    "blueprints": [],
+    "skipClient": true
+  }
+}
