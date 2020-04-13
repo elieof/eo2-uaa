@@ -2,6 +2,7 @@ package com.fahkap.eo2.uaa.web.rest;
 
 import com.fahkap.eo2.uaa.Eo2UaaApp;
 import com.fahkap.eo2.uaa.config.Constants;
+import com.fahkap.eo2.uaa.domain.Authority;
 import com.fahkap.eo2.uaa.domain.User;
 import com.fahkap.eo2.uaa.repository.AuthorityRepository;
 import com.fahkap.eo2.uaa.repository.UserRepository;
@@ -130,7 +131,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(validUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -154,7 +155,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -179,7 +180,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -204,7 +205,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -229,7 +230,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -270,7 +271,7 @@ public class AccountResourceIT {
         // First user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(firstUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -278,7 +279,7 @@ public class AccountResourceIT {
         // Second (non activated) user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(secondUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -291,7 +292,7 @@ public class AccountResourceIT {
         // Second (already activated) user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(secondUser))
                 .with(csrf()))
             .andExpect(status().is4xxClientError());
@@ -314,7 +315,7 @@ public class AccountResourceIT {
         // Register first user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(firstUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -336,7 +337,7 @@ public class AccountResourceIT {
         // Register second (non activated) user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(secondUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -362,7 +363,7 @@ public class AccountResourceIT {
         // Register third (not activated) user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(userWithUpperCaseEmail))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -377,7 +378,7 @@ public class AccountResourceIT {
         // Register 4th (already activated) user
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(secondUser))
                 .with(csrf()))
             .andExpect(status().is4xxClientError());
@@ -399,7 +400,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/register")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(validUser))
                 .with(csrf()))
             .andExpect(status().isCreated());
@@ -461,7 +462,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(userDTO))
                 .with(csrf()))
             .andExpect(status().isOk());
@@ -501,7 +502,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(userDTO))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -541,7 +542,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(userDTO))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -574,7 +575,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(userDTO))
                 .with(csrf()))
             .andExpect(status().isOk());
@@ -595,7 +596,7 @@ public class AccountResourceIT {
         userRepository.saveAndFlush(user);
 
         restAccountMockMvc.perform(post("/api/account/change-password")
-            .contentType(TestUtil.APPLICATION_JSON)
+            .contentType(MediaType.APPLICATION_JSON)
             .content(TestUtil.convertObjectToJsonBytes(new PasswordChangeDTO("1"+currentPassword, "new password")))
             .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -617,7 +618,7 @@ public class AccountResourceIT {
         userRepository.saveAndFlush(user);
 
         restAccountMockMvc.perform(post("/api/account/change-password")
-            .contentType(TestUtil.APPLICATION_JSON)
+            .contentType(MediaType.APPLICATION_JSON)
             .content(TestUtil.convertObjectToJsonBytes(new PasswordChangeDTO(currentPassword, "new password")))
             .with(csrf()))
             .andExpect(status().isOk());
@@ -640,7 +641,7 @@ public class AccountResourceIT {
         String newPassword = RandomStringUtils.random(ManagedUserVM.PASSWORD_MIN_LENGTH - 1);
 
         restAccountMockMvc.perform(post("/api/account/change-password")
-            .contentType(TestUtil.APPLICATION_JSON)
+            .contentType(MediaType.APPLICATION_JSON)
             .content(TestUtil.convertObjectToJsonBytes(new PasswordChangeDTO(currentPassword, newPassword)))
             .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -663,7 +664,7 @@ public class AccountResourceIT {
         String newPassword = RandomStringUtils.random(ManagedUserVM.PASSWORD_MAX_LENGTH + 1);
 
         restAccountMockMvc.perform(post("/api/account/change-password")
-            .contentType(TestUtil.APPLICATION_JSON)
+            .contentType(MediaType.APPLICATION_JSON)
             .content(TestUtil.convertObjectToJsonBytes(new PasswordChangeDTO(currentPassword, newPassword)))
             .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -684,7 +685,7 @@ public class AccountResourceIT {
         userRepository.saveAndFlush(user);
 
         restAccountMockMvc.perform(post("/api/account/change-password")
-            .contentType(TestUtil.APPLICATION_JSON)
+            .contentType(MediaType.APPLICATION_JSON)
             .content(TestUtil.convertObjectToJsonBytes(new PasswordChangeDTO(currentPassword, "")))
             .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -751,7 +752,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account/reset-password/finish")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(keyAndPassword))
                 .with(csrf()))
             .andExpect(status().isOk());
@@ -777,7 +778,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account/reset-password/finish")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(keyAndPassword))
                 .with(csrf()))
             .andExpect(status().isBadRequest());
@@ -795,7 +796,7 @@ public class AccountResourceIT {
 
         restAccountMockMvc.perform(
             post("/api/account/reset-password/finish")
-                .contentType(TestUtil.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(TestUtil.convertObjectToJsonBytes(keyAndPassword))
                 .with(csrf()))
             .andExpect(status().isInternalServerError());
